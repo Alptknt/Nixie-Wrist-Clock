@@ -1,2 +1,2 @@
-# Nixie-Wrist-Clock
- 
+# Nixie Wrist Clock
+ 2 Digit Nixie wrist clock 
