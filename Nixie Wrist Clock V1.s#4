@@ -10752,6 +10752,13 @@ Switches electronic signals</description>
 </sheet>
 <sheet>
 <plain>
+<text x="167.64" y="27.94" size="2.54" layer="94">3V3 Supply </text>
+<text x="5.08" y="7.62" size="1.778" layer="98">https://www.ozdisan.com/entegre-devreler-ics/guc-entegreleri/ic-lineer-voltaj-regulatorleri/TLV70233DBVT</text>
+<text x="5.08" y="5.08" size="1.778" layer="98">https://img.ozdisan.com/ETicaret_Dosya/360362_9357835.pdf</text>
+<text x="5.08" y="20.32" size="1.778" layer="98">https://www.ozdisan.com/entegre-devreler-ics/guc-entegreleri/ic-lineer-voltaj-regulatorleri/TLV70033DDCR</text>
+<text x="5.08" y="17.78" size="1.778" layer="98">https://img.ozdisan.com/ETicaret_Dosya/350327_3421682.pdf</text>
+<text x="5.08" y="22.86" size="1.778" layer="98">TLV70033 (200mA)</text>
+<text x="5.08" y="10.16" size="1.778" layer="98">TLV70233 (300mA)</text>
 </plain>
 <instances>
 <instance part="FRAME4" gate="G$1" x="0" y="0" smashed="yes"/>
