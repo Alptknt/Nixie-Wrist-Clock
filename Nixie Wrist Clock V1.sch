@@ -18537,7 +18537,6 @@ Switches electronic signals</description>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
 <part name="U$3" library="Alp-Special" deviceset="TLV70233" device="SOT23-5"/>
 <part name="C3" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="100nF"/>
-<part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
 <part name="+3V11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="C4" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="100nF"/>
@@ -18545,10 +18544,7 @@ Switches electronic signals</description>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FRAME5" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
 <part name="U$4" library="Alp-Special" deviceset="TPS61252DSGR" device=""/>
-<part name="C5" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="100nF"/>
-<part name="C6" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="100nF"/>
 <part name="U$5" library="Alp-Special" deviceset="FPI-SERIES-INDUCTOR" device="0302"/>
-<part name="C7" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="100nF"/>
 <part name="C9" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="100pF"/>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="6.65K"/>
 <part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="SMCA" package3d_urn="urn:adsk.eagle:package:25926/3" value="10uF"/>
@@ -19805,10 +19801,6 @@ OFF state current consuption -&gt; 1uA</text>
 <attribute name="NAME" x="75.184" y="112.141" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="107.061" size="1.778" layer="96"/>
 </instance>
-<instance part="R11" gate="G$1" x="124.46" y="132.08" smashed="yes" rot="R180">
-<attribute name="NAME" x="128.27" y="130.5814" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="128.27" y="135.382" size="1.778" layer="96" rot="R180"/>
-</instance>
 <instance part="+3V11" gate="G$1" x="86.36" y="116.84" smashed="yes" rot="R270">
 <attribute name="VALUE" x="81.28" y="119.38" size="1.778" layer="96"/>
 </instance>
@@ -19824,18 +19816,6 @@ OFF state current consuption -&gt; 1uA</text>
 </instance>
 <instance part="GND6" gate="1" x="22.86" y="101.6" smashed="yes">
 <attribute name="VALUE" x="20.32" y="99.06" size="1.778" layer="96"/>
-</instance>
-<instance part="C5" gate="C$1" x="99.06" y="101.6" smashed="yes">
-<attribute name="NAME" x="100.584" y="101.981" size="1.778" layer="95"/>
-<attribute name="VALUE" x="100.584" y="96.901" size="1.778" layer="96"/>
-</instance>
-<instance part="C6" gate="C$1" x="96.52" y="111.76" smashed="yes">
-<attribute name="NAME" x="98.044" y="112.141" size="1.778" layer="95"/>
-<attribute name="VALUE" x="98.044" y="107.061" size="1.778" layer="96"/>
-</instance>
-<instance part="C7" gate="C$1" x="162.56" y="101.6" smashed="yes">
-<attribute name="NAME" x="164.084" y="101.981" size="1.778" layer="95"/>
-<attribute name="VALUE" x="164.084" y="96.901" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>

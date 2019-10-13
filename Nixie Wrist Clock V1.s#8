@@ -1236,6 +1236,29 @@ IPC Medium Density</description>
 <rectangle x1="0.55" y1="-0.9" x2="0.95" y2="-0.54" layer="29" rot="R90"/>
 <rectangle x1="-0.425" y1="-0.425" x2="0.425" y2="0.425" layer="39"/>
 </package>
+<package name="SOT23-5">
+<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
+<wire x1="1.4" y1="-0.8" x2="-1.4" y2="-0.8" width="0.1524" layer="51"/>
+<wire x1="-1.4" y1="0.8" x2="1.4" y2="0.8" width="0.1524" layer="51"/>
+<wire x1="1.4" y1="0.8" x2="1.4" y2="-0.8" width="0.1524" layer="51"/>
+<wire x1="-1.4" y1="0.8" x2="-1.4" y2="-0.8" width="0.1524" layer="51"/>
+<smd name="1" x="-0.95" y="-1.3001" dx="0.55" dy="1.2" layer="1"/>
+<smd name="2" x="0" y="-1.3001" dx="0.55" dy="1.2" layer="1"/>
+<smd name="3" x="0.95" y="-1.3001" dx="0.55" dy="1.2" layer="1"/>
+<smd name="4" x="0.95" y="1.3001" dx="0.55" dy="1.2" layer="1"/>
+<smd name="5" x="-0.95" y="1.3001" dx="0.55" dy="1.2" layer="1"/>
+<rectangle x1="-1.2" y1="-1.5" x2="-0.7" y2="-0.85" layer="51"/>
+<rectangle x1="-0.25" y1="-1.5" x2="0.25" y2="-0.85" layer="51"/>
+<rectangle x1="0.7" y1="-1.5" x2="1.2" y2="-0.85" layer="51"/>
+<rectangle x1="0.7" y1="0.85" x2="1.2" y2="1.5" layer="51"/>
+<rectangle x1="-1.2" y1="0.85" x2="-0.7" y2="1.5" layer="51"/>
+<wire x1="1.27" y1="0.4294" x2="1.27" y2="-0.4294" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-0.4294" x2="-1.27" y2="0.4294" width="0.2032" layer="21"/>
+<wire x1="-0.2684" y1="0.7088" x2="0.2684" y2="0.7088" width="0.2032" layer="21"/>
+<circle x="-1.6002" y="-1.016" radius="0.127" width="0" layer="21"/>
+<text x="-1.905" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="2.54" y="0" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="QFN50P707X707X80-45T515" urn="urn:adsk.eagle:package:12110506/1" type="model">
@@ -1312,6 +1335,17 @@ IPC Medium Density</description>
 <pin name="CBS" x="12.7" y="5.08" length="short" rot="R180"/>
 <pin name="SCK" x="12.7" y="10.16" length="short" rot="R180"/>
 <text x="0" y="0" size="2.54" layer="94" font="vector" rot="R90" align="center">BMA400</text>
+</symbol>
+<symbol name="TLV700">
+<wire x1="-10.16" y1="10.16" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<pin name="IN" x="-12.7" y="5.08" length="short" direction="in"/>
+<pin name="GND" x="12.7" y="-2.54" length="short" rot="R180"/>
+<pin name="OUT" x="12.7" y="5.08" length="short" direction="out" rot="R180"/>
+<pin name="EN" x="-12.7" y="-2.54" length="short" direction="in"/>
+<text x="0" y="6.858" size="2.54" layer="94" align="bottom-center">TLV70XXX</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1411,6 +1445,42 @@ IPC Medium Density</description>
 <connect gate="G$1" pin="SDX" pad="2"/>
 <connect gate="G$1" pin="VDD" pad="7"/>
 <connect gate="G$1" pin="VDDIO" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TLV70233">
+<description>&lt;h2&gt; TLV70233 3.3V LDO Regulator (300mA)&lt;/h2&gt;
+&lt;p&gt;
+Small footprint 3.3V LDO in SOT23-5 package.
+&lt;/p&gt;
+
+
+
+
+
+&lt;p&gt;
+&lt;a href="https://www.ozdisan.com/entegre-devreler-ics/guc-entegreleri/ic-lineer-voltaj-regulatorleri/TLV70233DBVT"&gt;Özdisan Link&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="https://img.ozdisan.com/ETicaret_Dosya/360362_9357835.pdf"&gt;PDF Link&lt;/a&gt;
+&lt;/p&gt;
+
+
+&lt;!Alptekin Tanatar!&gt;</description>
+<gates>
+<gate name="G$1" symbol="TLV700" x="0" y="0"/>
+</gates>
+<devices>
+<device name="SOT23-5" package="SOT23-5">
+<connects>
+<connect gate="G$1" pin="EN" pad="3"/>
+<connect gate="G$1" pin="GND" pad="2 4"/>
+<connect gate="G$1" pin="IN" pad="1"/>
+<connect gate="G$1" pin="OUT" pad="5"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -9542,6 +9612,7 @@ Switches electronic signals</description>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
+<part name="U$3" library="Alp-Special" deviceset="TLV70233" device="SOT23-5"/>
 </parts>
 <sheets>
 <sheet>
@@ -10767,6 +10838,7 @@ Switches electronic signals</description>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
+<instance part="U$3" gate="G$1" x="208.28" y="121.92" smashed="yes"/>
 </instances>
 <busses>
 </busses>
