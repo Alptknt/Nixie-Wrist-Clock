@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.1">
+<eagle version="9.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1278,6 +1278,36 @@ IPC Medium Density</description>
 <text x="-1.905" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
 <text x="2.54" y="0" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;VALUE</text>
 </package>
+<package name="WSON-8-PAD">
+<wire x1="-1" y1="-1" x2="-1" y2="1" width="0.127" layer="51"/>
+<wire x1="-1" y1="1" x2="1" y2="1" width="0.127" layer="51"/>
+<wire x1="1" y1="1" x2="1" y2="-1" width="0.127" layer="51"/>
+<wire x1="1" y1="-1" x2="-1" y2="-1" width="0.127" layer="51"/>
+<smd name="6" x="0.25" y="0.95" dx="0.25" dy="0.5" layer="1"/>
+<smd name="5" x="0.75" y="0.95" dx="0.25" dy="0.5" layer="1"/>
+<smd name="8" x="-0.75" y="0.95" dx="0.25" dy="0.5" layer="1"/>
+<smd name="7" x="-0.25" y="0.95" dx="0.25" dy="0.5" layer="1"/>
+<smd name="2" x="-0.25" y="-0.95" dx="0.25" dy="0.5" layer="1"/>
+<smd name="3" x="0.25" y="-0.95" dx="0.25" dy="0.5" layer="1"/>
+<smd name="4" x="0.75" y="-0.95" dx="0.25" dy="0.5" layer="1"/>
+<smd name="1" x="-0.75" y="-0.95" dx="0.25" dy="0.5" layer="1"/>
+<smd name="PAD" x="0" y="0" dx="1.6" dy="0.9" layer="1" cream="no"/>
+<wire x1="-1" y1="1" x2="-1" y2="-1" width="0.127" layer="21"/>
+<wire x1="1" y1="1" x2="1" y2="-1" width="0.127" layer="21"/>
+<circle x="-1" y="-1" radius="0.05" width="0.127" layer="21"/>
+<rectangle x1="-0.8" y1="-0.45" x2="0.8" y2="0.45" layer="51"/>
+<rectangle x1="-0.375" y1="-1" x2="-0.125" y2="-0.7" layer="51"/>
+<rectangle x1="-0.875" y1="-1" x2="-0.625" y2="-0.7" layer="51"/>
+<rectangle x1="0.125" y1="-1" x2="0.375" y2="-0.7" layer="51"/>
+<rectangle x1="0.625" y1="-1" x2="0.875" y2="-0.7" layer="51"/>
+<rectangle x1="0.125" y1="0.7" x2="0.375" y2="1" layer="51" rot="R180"/>
+<rectangle x1="0.625" y1="0.7" x2="0.875" y2="1" layer="51" rot="R180"/>
+<rectangle x1="-0.375" y1="0.7" x2="-0.125" y2="1" layer="51" rot="R180"/>
+<rectangle x1="-0.875" y1="0.7" x2="-0.625" y2="1" layer="51" rot="R180"/>
+<rectangle x1="-0.65" y1="-0.35" x2="0.65" y2="0.35" layer="31"/>
+<circle x="-1.5" y="-1" radius="0.22360625" width="0.2032" layer="21"/>
+<circle x="-1.5" y="-1" radius="0.22360625" width="0.127" layer="51"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="QFN50P707X707X80-45T515" urn="urn:adsk.eagle:package:12110506/1" type="model">
@@ -1365,6 +1395,21 @@ IPC Medium Density</description>
 <pin name="OUT" x="12.7" y="5.08" length="short" direction="out" rot="R180"/>
 <pin name="EN" x="-12.7" y="-2.54" length="short" direction="in"/>
 <text x="0" y="6.858" size="2.54" layer="94" align="bottom-center">TLV70XXX</text>
+</symbol>
+<symbol name="TPS61252DSGR">
+<wire x1="-10.16" y1="12.7" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-12.7" x2="10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-12.7" x2="10.16" y2="12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="12.7" x2="-10.16" y2="12.7" width="0.254" layer="94"/>
+<pin name="GND" x="-12.7" y="-7.62" length="short"/>
+<pin name="VOUT" x="12.7" y="2.54" length="short" rot="R180"/>
+<pin name="FB" x="12.7" y="-2.54" length="short" rot="R180"/>
+<pin name="ILIM" x="-12.7" y="-2.54" length="short"/>
+<pin name="PG" x="12.7" y="-7.62" length="short" rot="R180"/>
+<pin name="EN" x="-12.7" y="2.54" length="short"/>
+<pin name="SW" x="12.7" y="7.62" length="short" rot="R180"/>
+<pin name="VIN" x="-12.7" y="7.62" length="short"/>
+<text x="0" y="0" size="1.778" layer="94" rot="R90" align="center">TPS61252DSGR</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1500,6 +1545,48 @@ Small footprint 3.3V LDO in SOT23-5 package.
 <connect gate="G$1" pin="GND" pad="2 4"/>
 <connect gate="G$1" pin="IN" pad="1"/>
 <connect gate="G$1" pin="OUT" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TPS61252DSGR">
+<description>&lt;h2&gt;TPS61252DSGR&lt;/h2&gt;
+&lt;p&gt;DC-DC Step-Up Converter with Adjustable V&lt;sub&gt;OUT&lt;/sub&gt;&lt;/p&gt;
+&lt;p&gt;Integrated switch no need for external switching component &lt;/p&gt;
+&lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt; Adjustable Current Input Limit&lt;/li&gt;
+&lt;li&gt; Small Footprint 8-WSON (2mm x 2mm)&lt;/li&gt;
+&lt;li&gt; Max Current Output: 1.5A &lt;/li&gt;
+&lt;li&gt; Input Voltage Range: 2.3 - 6 V&lt;/li&gt;
+&lt;li&gt; Max Voltage Range: 6.5V &lt;/li&gt;
+&lt;li&gt; Efficiency up to %92&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h3&gt; Some Functions to Determine Some Components Value &lt;/h3&gt;
+
+&lt;p&gt;&lt;font Size="+1"&gt;R&lt;sub&gt;ILIM&lt;/sub&gt; = (1 / I&lt;sub&gt;LIM&lt;/sub&gt;) x 10.000&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;font Size="+1"&gt; I&lt;sub&gt;OUT(max)&lt;/sub&gt; = I&lt;sub&gt;LIM&lt;/sub&gt; x (V&lt;sub&gt;IN&lt;/sub&gt; x η / V&lt;sub&gt;OUT&lt;/sub&gt;) &lt;/font&gt;&lt;/p&gt;
+η is efficiency of the system generally above %80 (Datasheet figure.1)</description>
+<gates>
+<gate name="G$1" symbol="TPS61252DSGR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="WSON-8-PAD">
+<connects>
+<connect gate="G$1" pin="EN" pad="6"/>
+<connect gate="G$1" pin="FB" pad="3"/>
+<connect gate="G$1" pin="GND" pad="1 PAD"/>
+<connect gate="G$1" pin="ILIM" pad="4"/>
+<connect gate="G$1" pin="PG" pad="5"/>
+<connect gate="G$1" pin="SW" pad="7"/>
+<connect gate="G$1" pin="VIN" pad="8"/>
+<connect gate="G$1" pin="VOUT" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -9639,6 +9726,9 @@ Switches electronic signals</description>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FRAME5" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="U$4" library="Alp-Special" deviceset="TPS61252DSGR" device=""/>
+<part name="C5" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="100nF"/>
+<part name="C6" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="100nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -10901,6 +10991,14 @@ OFF state current consuption -&gt; 1uA</text>
 <instance part="GND6" gate="1" x="22.86" y="101.6" smashed="yes">
 <attribute name="VALUE" x="20.32" y="99.06" size="1.778" layer="96"/>
 </instance>
+<instance part="C5" gate="C$1" x="99.06" y="101.6" smashed="yes">
+<attribute name="NAME" x="100.584" y="101.981" size="1.778" layer="95"/>
+<attribute name="VALUE" x="100.584" y="96.901" size="1.778" layer="96"/>
+</instance>
+<instance part="C6" gate="C$1" x="96.52" y="111.76" smashed="yes">
+<attribute name="NAME" x="98.044" y="112.141" size="1.778" layer="95"/>
+<attribute name="VALUE" x="98.044" y="107.061" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10967,6 +11065,7 @@ OFF state current consuption -&gt; 1uA</text>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
+<instance part="U$4" gate="G$1" x="124.46" y="96.52" smashed="yes"/>
 </instances>
 <busses>
 </busses>

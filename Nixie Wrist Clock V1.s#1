@@ -18559,6 +18559,8 @@ Switches electronic signals</description>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="C5" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="1pF"/>
+<part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -18571,7 +18573,7 @@ Switches electronic signals</description>
 <text x="2.54" y="35.56" size="1.778" layer="94">To Do List</text>
 <wire x1="43.18" y1="12.7" x2="43.18" y2="0" width="0.1524" layer="94"/>
 <text x="167.64" y="27.94" size="2.54" layer="94">MicroControler</text>
-<text x="185.42" y="78.74" size="1.778" layer="98">Anthenna Match 403 kılıfta</text>
+<text x="203.2" y="68.58" size="1.778" layer="98">Anthenna Match 403 kılıfta</text>
 <wire x1="10.16" y1="124.46" x2="10.16" y2="83.82" width="0.1524" layer="98"/>
 <wire x1="10.16" y1="83.82" x2="48.26" y2="83.82" width="0.1524" layer="98"/>
 <wire x1="48.26" y1="83.82" x2="48.26" y2="124.46" width="0.1524" layer="98"/>
@@ -18586,7 +18588,6 @@ Switches electronic signals</description>
 <wire x1="20.32" y1="12.7" x2="0" y2="12.7" width="0.1524" layer="94"/>
 <wire x1="20.32" y1="12.7" x2="43.18" y2="12.7" width="0.1524" layer="94"/>
 <text x="2.54" y="10.16" size="1.778" layer="94">In Progress</text>
-<text x="185.42" y="73.66" size="1.778" layer="91">çıkış condansatörü eklenecek 1pf</text>
 </plain>
 <instances>
 <instance part="GND8" gate="1" x="81.28" y="35.56" smashed="yes" rot="MR0">
@@ -18698,6 +18699,13 @@ Switches electronic signals</description>
 <instance part="+3V2" gate="G$1" x="137.16" y="142.24" smashed="yes">
 <attribute name="VALUE" x="134.62" y="137.16" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="C5" gate="C$1" x="195.58" y="81.28" smashed="yes">
+<attribute name="NAME" x="197.104" y="81.661" size="1.778" layer="95"/>
+<attribute name="VALUE" x="197.104" y="76.581" size="1.778" layer="96"/>
+</instance>
+<instance part="GND22" gate="1" x="195.58" y="71.12" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="198.12" y="68.58" size="1.778" layer="96" rot="MR0"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -18780,6 +18788,11 @@ Switches electronic signals</description>
 <junction x="15.24" y="96.52"/>
 <pinref part="C23" gate="C$1" pin="1"/>
 <pinref part="C24" gate="C$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="C5" gate="C$1" pin="2"/>
+<wire x1="195.58" y1="76.2" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="GND22" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="DEC1" class="0">
@@ -19115,8 +19128,12 @@ Switches electronic signals</description>
 <net name="RF" class="0">
 <segment>
 <pinref part="L2" gate="L$1" pin="2"/>
-<wire x1="193.04" y1="86.36" x2="205.74" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="86.36" x2="195.58" y2="86.36" width="0.1524" layer="91"/>
 <label x="198.12" y="86.36" size="1.778" layer="95"/>
+<pinref part="C5" gate="C$1" pin="1"/>
+<wire x1="195.58" y1="86.36" x2="205.74" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="83.82" x2="195.58" y2="86.36" width="0.1524" layer="91"/>
+<junction x="195.58" y="86.36"/>
 </segment>
 </net>
 <net name="+3V3" class="0">

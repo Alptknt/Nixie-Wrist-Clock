@@ -18564,6 +18564,7 @@ Switches electronic signals</description>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19967,6 +19968,9 @@ OFF state current consuption -&gt; 1uA</text>
 <instance part="P+10" gate="1" x="193.04" y="109.22" smashed="yes" rot="R270">
 <attribute name="VALUE" x="187.96" y="111.76" size="1.778" layer="96"/>
 </instance>
+<instance part="P+11" gate="VCC" x="63.5" y="104.14" smashed="yes" rot="R90">
+<attribute name="VALUE" x="66.04" y="101.6" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -19976,19 +19980,6 @@ OFF state current consuption -&gt; 1uA</text>
 <pinref part="U$4" gate="G$1" pin="EN"/>
 <wire x1="111.76" y1="99.06" x2="106.68" y2="99.06" width="0.1524" layer="91"/>
 <label x="106.68" y="99.06" size="2.54" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="VIN"/>
-<wire x1="111.76" y1="104.14" x2="109.22" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="104.14" x2="109.22" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="116.84" x2="119.38" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="104.14" x2="81.28" y2="104.14" width="0.1524" layer="91"/>
-<junction x="109.22" y="104.14"/>
-<wire x1="81.28" y1="104.14" x2="81.28" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="C10" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -20084,6 +20075,22 @@ OFF state current consuption -&gt; 1uA</text>
 <wire x1="149.86" y1="71.12" x2="149.86" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="PG"/>
 <wire x1="149.86" y1="88.9" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="VIN"/>
+<wire x1="111.76" y1="104.14" x2="109.22" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="104.14" x2="109.22" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="116.84" x2="119.38" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="104.14" x2="81.28" y2="104.14" width="0.1524" layer="91"/>
+<junction x="109.22" y="104.14"/>
+<wire x1="81.28" y1="104.14" x2="81.28" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="+"/>
+<pinref part="P+11" gate="VCC" pin="VCC"/>
+<wire x1="81.28" y1="104.14" x2="66.04" y2="104.14" width="0.1524" layer="91"/>
+<junction x="81.28" y="104.14"/>
 </segment>
 </net>
 </nets>
