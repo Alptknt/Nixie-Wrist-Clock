@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -18588,7 +18588,6 @@ Switches electronic signals</description>
 <wire x1="20.32" y1="12.7" x2="0" y2="12.7" width="0.1524" layer="94"/>
 <wire x1="20.32" y1="12.7" x2="43.18" y2="12.7" width="0.1524" layer="94"/>
 <text x="2.54" y="10.16" size="1.778" layer="94">In Progress</text>
-<text x="20.32" y="165.1" size="6.4516" layer="91">UPDATE #8</text>
 </plain>
 <instances>
 <instance part="GND8" gate="1" x="81.28" y="35.56" smashed="yes" rot="MR0">
